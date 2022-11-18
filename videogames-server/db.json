@@ -1,0 +1,158 @@
+{
+  "videogames": [
+    {
+      "title": "The Legend of Zelda: Ocarina of Time",
+      "company": "Nintendo",
+      "cover": "https://static-cdn.jtvnw.net/ttv-boxart/The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time%203D.jpg",
+      "genre": "Adventures",
+      "year": "1998",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 1
+    },
+    {
+      "id": 3,
+      "title": "Assasin's Creed - Oddysey",
+      "company": "Ubisoft",
+      "cover": "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/HXxek19ysMe9h1WjkasfIcovCjlbBitz.png",
+      "platform": [
+        "PlayStation",
+        "Xbox",
+        "Nintendo Switch",
+        "PC"
+      ],
+      "year": "2018",
+      "genre": "Adventures"
+    },
+    {
+      "title": "Overwatch",
+      "company": "Blizzard",
+      "cover": "https://m.media-amazon.com/images/I/61FQesvdvzL._AC_SY741_.jpg",
+      "genre": "Shooter",
+      "year": "2016",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Skyrim",
+      "company": "Bethesda",
+      "cover": "https://www.somosxbox.com/wp-content/uploads/2016/06/bethesda.jpg",
+      "genre": "RPG",
+      "year": "2011",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 5
+    },
+    {
+      "title": "Bayonetta 2",
+      "company": "Platinum Games",
+      "cover": "https://frsgames.com/161-large_default/comprar-bayonetta-2-switch-clave-nintendo.jpg",
+      "genre": "Action",
+      "year": "2018",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 6
+    },
+    {
+      "title": "Luigi's Mansion",
+      "company": "Nintendo",
+      "cover": "https://m.media-amazon.com/images/I/81cHm50auZL._AC_SY879_.jpg",
+      "genre": "Action",
+      "year": "2019",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "id": 7
+    },
+    {
+      "title": "Call of Duty",
+      "company": "EA",
+      "cover": "https://www.tonica.la/__export/1588799347389/sites/debate/img/2020/05/06/call-of-duty-black-ops-2-portada.jpg_1902800913.jpg",
+      "genre": "Shooter",
+      "year": "2018",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 15
+    },
+    {
+      "title": "Dragon Age Inquisition",
+      "company": "Bioware",
+      "cover": "https://image.api.playstation.com/cdn/EP0006/CUSA00503_00/dp7IoaA4V6R4A8SadLvWzGk9ZDGSay7K.png",
+      "genre": "RPG",
+      "year": "2014",
+      "platform": [
+        "PlayStation",
+        "Xbox",
+        "PC"
+      ],
+      "id": 16
+    },
+    {
+      "title": "Los Sims 4",
+      "company": "EA Games",
+      "cover": "https://sm.ign.com/ign_es/game/l/los-sims-4/los-sims-4_c8f4.jpg",
+      "genre": "Adventures",
+      "year": "2014",
+      "platform": [
+        "PlayStation",
+        "Nintendo Switch",
+        "Xbox",
+        "PC"
+      ],
+      "id": 22
+    },
+    {
+      "title": "Resident Evil 4",
+      "company": "Capcom",
+      "cover": "https://cdn-cf.gamivo.com/image_cover.jpg?f=62778&n=4500487363528718.jpg&h=371af30fb93e4c1918705d8b1b88a689",
+      "genre": "Survival Horror",
+      "year": "2005",
+      "platform": [
+        "PlayStation",
+        "Xbox",
+        "PC"
+      ],
+      "id": 24
+    },
+    {
+      "title": "Resident Evil 2",
+      "company": "Capcom",
+      "cover": "https://bloody-disgusting.com/wp-content/uploads/2018/07/re-2.png",
+      "genre": "Survival Horror",
+      "year": "2019",
+      "platform": [
+        "PlayStation",
+        "Xbox",
+        "PC"
+      ],
+      "id": 25
+    },
+    {
+      "title": "Spyro el dragón",
+      "company": "Insomniac",
+      "cover": "https://image.api.playstation.com/cdn/EP0002/CUSA12085_00/SzdddrptQcyO3tU3O9ALDT77gpNUnRtP.png",
+      "genre": "Platforms",
+      "year": "2000",
+      "play": "http://www.ps1fun.com/play/spyro-the-dragon/1730",
+      "platform": [
+        "PlayStation"
+      ],
+      "id": 26
+    }
+  ]
+}

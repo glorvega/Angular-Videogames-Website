@@ -1,1 +1,13 @@
-<p>creations works!</p>
+<div class="creations-container">
+    <h2 class="creations-container__title">¡Aquí aparecerán todos los videojuegos que has añadido!</h2>
+    <div class="creations-container__list">
+        <div *ngFor="let creation of creations" class="creations-container__list__creation">
+            <h4 class="creations-container__list__creation--title">{{ creation.title }}</h4>
+            <img class="creations-container__list__creation--cover" src="{{ creation.cover }}" alt="{{ creation.title }}" />
+            <p>{{ creation.company }} - {{ creation.year }}</p>
+            <p>{{ creation.genre }}</p>
+            <p class="creations-container__list__creation--platform">{{ creation.platform }}</p>
+        </div>
+    </div>
+
+</div>

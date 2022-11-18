@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CreationsInterface } from './interface/creations.interface';
+import { CreationsService } from './services/creations.service';
 
 @Component({
   selector: 'app-creations',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreationsComponent implements OnInit {
 
-  constructor() { }
+  creations: CreationsInterface[] = [];
+
+  constructor( private creationsService: CreationsService ) { }
 
   ngOnInit(): void {
+    this.creationsService.getCreations()
+    .subscribe( creations=> {
+      this.creations = creations;
+    })
+    
   }
 
 }
