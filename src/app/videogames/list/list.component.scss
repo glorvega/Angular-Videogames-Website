@@ -1,0 +1,10 @@
+.videogames-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    justify-content: center;
+}

@@ -2,6 +2,6 @@
 <!-- dentro de la lista, cada elemento del mapeo tendrá que redirigir a 'detail' cuando
 se haga click en él -->
 <div class="videogames-container">
-    <h1>Videogames List</h1>
+    <app-card *ngFor="let videogame of videogames" (click)="goToDetails(videogame.id)" [videogame]="videogame"></app-card>
     
 </div>

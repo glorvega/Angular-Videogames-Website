@@ -12,8 +12,7 @@ import { CreateComponent } from './pages/create/create.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'videogames', component: ListComponent },
-  { path: 'videogame', component: DetailComponent },
+  { path: 'videogames', loadChildren: () => import('./videogames/videogames.module').then(m => m.VideogamesModule)},
   { path: 'creations', component: CreationsComponent },
   { path: 'create', component: CreateComponent },
   { path: 'about', component: AboutComponent },
