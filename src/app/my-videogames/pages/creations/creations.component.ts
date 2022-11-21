@@ -15,16 +15,23 @@ export class CreationsComponent implements OnInit {
   constructor( private creationsService: CreationsService ) { }
 
   ngOnInit(): void {
-    this.creationsService.getCreations()
-    .subscribe( creations=> {
-      this.creations = creations;
-    })
+    this.getVideogames();
   }
 
+  public getVideogames = () => {
+    this.creationsService.getCreations().subscribe( creations=> {
+      this.creations = creations;
+    });
+  };
+
   public filterCreations = (filter: string) => {
-      this.creations = this.creations.filter((creation) =>
+    if (filter === ''){
+      this.getVideogames();
+    }  else {
+       this.creations = this.creations.filter((creation) =>
         creation.title.toLowerCase().includes(filter.toLowerCase())
       );
+    }
   };
 
 }

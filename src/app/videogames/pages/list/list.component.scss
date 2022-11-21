@@ -1,10 +1,37 @@
 .videogames-container {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 40px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    &__title {
+        margin: 0 auto;
+        font-size: 30px;
+        color: #77C3B1;
+        font-weight: bold;
+    }
+
+    &__input {
+        width: 20rem;
+        height: 2rem;
+        background: #F2F2F2;
+        border: 1px solid #CCCCCC;
+        border-radius: 2rem;
+        outline: none;
+        font-size: 20px;
+        text-align: center;
+        color: #737373;
+        letter-spacing: 1px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
 }

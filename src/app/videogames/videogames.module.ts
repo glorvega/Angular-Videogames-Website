@@ -4,6 +4,7 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { ListComponent } from './pages/list/list.component';
 import { VideogamesRoutingModule } from './videogames-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     VideogamesRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class VideogamesModule { }

@@ -1,7 +1,6 @@
 <div class="creations-container">
     <h2 class="creations-container__title">¡Aquí aparecerán todos los videojuegos que has añadido!</h2>
-    <input type="text" placeholder="Busca tu videojuego favorito" class="inputbox" >
-    <!-- [(ngModel)]="inputSearch" (ngModelChange)="filterCreations(inputSearch)" -->
+    <input type="text" placeholder="Busca tu videojuego favorito" class="creations-container__input" [(ngModel)]="inputSearch" (ngModelChange)="filterCreations(inputSearch)">
     <div class="creations-container__list">
         <div *ngFor="let creation of creations" class="creations-container__list__creation">
             <h4 class="creations-container__list__creation--title">{{ creation.title }}</h4>
@@ -9,6 +8,9 @@
             <p>{{ creation.company }} - {{ creation.year }}</p>
             <p>{{ creation.genre }}</p>
             <p class="creations-container__list__creation--platform">{{ creation.platform }}</p>
+            <div class="creations-container__list__creation--buttons">
+                <button>Editar</button>
+                <button>Borrar</button>
         </div>
     </div>
 

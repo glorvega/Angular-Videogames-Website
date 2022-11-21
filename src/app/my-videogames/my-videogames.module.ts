@@ -4,7 +4,7 @@ import { CreateComponent } from './pages/create/create.component';
 import { CreationsComponent } from './pages/creations/creations.component';
 import { MyVideogamesRoutingModule } from './my-videogames-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     MyVideogamesRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MyVideogamesModule { }

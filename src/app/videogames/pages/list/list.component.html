@@ -1,7 +1,11 @@
-
 <!-- dentro de la lista, cada elemento del mapeo tendrá que redirigir a 'detail' cuando
 se haga click en él -->
 <div class="videogames-container">
-    <app-card *ngFor="let videogame of videogames" (click)="goToDetails(videogame.id)" [videogame]="videogame"></app-card>
-    
+    <h2 class="videogames-container__title">¡Aquí aparecerán todos los videojuegos que puedes añadir a tu lista!</h2>
+    <input type="text" placeholder="Busca tu videojuego favorito" class="videogames-container__input"
+        [(ngModel)]="inputSearch" (ngModelChange)="filterVideogames(inputSearch)">
+    <div class="videogames-container__list">
+        <app-card *ngFor="let videogame of videogames" (click)="goToDetails(videogame.id)" [videogame]="videogame">
+        </app-card>
+    </div>
 </div>

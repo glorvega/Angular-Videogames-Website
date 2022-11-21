@@ -10,6 +10,7 @@ import { VideogamesService } from '../../services/videogames.service';
 })
 export class ListComponent implements OnInit {
   videogames!: VideogamesInterface[];
+  public inputSearch: string = '';
 
   constructor(private videogamesService: VideogamesService, private router: Router) {}
 
@@ -34,6 +35,14 @@ export class ListComponent implements OnInit {
       error: (error) => console.error('Error en get routes: ', error),
     });
   }
+
+  public filterVideogames = (filter: string) => {
+    if (filter === ''){
+      this.getVideogamesByName('COUNTER');
+    }  else {
+      this.getVideogamesByName(filter);
+    }
+  };
 
   goToDetails(id: string){
     this.router.navigate(['details', id]);
