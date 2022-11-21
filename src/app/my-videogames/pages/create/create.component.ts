@@ -5,7 +5,8 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { VideogamesInterface } from 'src/app/shared/interface/videogames.interface';
 import { CreationsService } from '../../services/creations.service';
 
 @Component({
@@ -29,12 +30,15 @@ export class CreateComponent implements OnInit {
     year: [''],
     genre: [''],
     platform: [''],
+    id: [''],
+    appId: [''],
   });
 
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    private creationsService: CreationsService
+    private creationsService: CreationsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -61,5 +65,31 @@ export class CreateComponent implements OnInit {
         console.log(error);
       },
     });
+  }
+
+  addToCollection = (game: VideogamesInterface) => {
+    this.creationsService.postVideogame(game).subscribe({
+      next: (videogame) => {
+        this.router.navigate(['creations']);
+      },
+      error: (error) => console.error('Error en get routes: ', error),
+    });
+  };
+
+  editGame = (game: VideogamesInterface) => {
+    this.creationsService.putVideogame(game).subscribe({
+      next: (videogame) => {
+        this.router.navigate(['creations']);
+      },
+      error: (error) => console.error('Error en get routes: ', error),
+    });
+  };
+
+  sendInfo() {
+    if (this.isEdit) {
+      this.editGame(this.videogamesForm.value);
+    } else {
+      this.addToCollection(this.videogamesForm.value);
+    }
   }
 }

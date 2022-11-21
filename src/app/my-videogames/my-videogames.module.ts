@@ -7,20 +7,14 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    CreateComponent,
-    CreationsComponent
-  ],
-  exports: [
-    CreateComponent,
-    CreationsComponent
-  ],
+  declarations: [CreateComponent, CreationsComponent],
+  exports: [CreateComponent, CreationsComponent],
   imports: [
     CommonModule,
     MyVideogamesRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
-  ]
+    FormsModule,
+  ],
 })
-export class MyVideogamesModule { }
+export class MyVideogamesModule {}

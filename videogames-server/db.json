@@ -12,18 +12,8 @@
       "id": 1
     },
     {
-      "id": 3,
-      "title": "Assasin's Creed - Oddysey",
-      "company": "Ubisoft",
-      "cover": "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/HXxek19ysMe9h1WjkasfIcovCjlbBitz.png",
-      "platform": [
-        "PlayStation",
-        "Xbox",
-        "Nintendo Switch",
-        "PC"
-      ],
-      "year": "2018",
-      "genre": "Adventures"
+      "title": "Pruebaaaa",
+      "id": 3
     },
     {
       "title": "Overwatch",
@@ -40,18 +30,18 @@
       "id": 4
     },
     {
-      "title": "Skyrim",
-      "company": "Bethesda",
+      "title": "Skyrim 2",
       "cover": "https://www.somosxbox.com/wp-content/uploads/2016/06/bethesda.jpg",
-      "genre": "RPG",
       "year": "2011",
+      "genre": "RPG",
       "platform": [
         "PlayStation",
         "Nintendo Switch",
         "Xbox",
         "PC"
       ],
-      "id": 5
+      "id": 5,
+      "appId": ""
     },
     {
       "title": "Bayonetta 2",

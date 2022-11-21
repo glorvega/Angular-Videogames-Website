@@ -51,7 +51,7 @@ export class ListComponent implements OnInit {
 
   goToDetails = (game: VideogamesInterface) => {
     console.log(game);
-    this.router.navigate(['details', game.id]);
+    this.router.navigate(['details', game.appId]);
   };
 
   addToCollection = (game: VideogamesInterface) => {
