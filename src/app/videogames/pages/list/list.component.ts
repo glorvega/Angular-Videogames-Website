@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VideogamesInterface } from 'src/app/shared/interface/videogames.interface';
+import { SteamVideogames } from '../../interfaces/steamVideogames.interface';
 import { VideogamesService } from '../../services/videogames.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class ListComponent implements OnInit {
   videogames!: VideogamesInterface[];
   public inputSearch: string = '';
 
-  constructor(private videogamesService: VideogamesService, private router: Router) {}
+  constructor(
+    private videogamesService: VideogamesService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getVideogamesByName('COUNTER');
@@ -24,10 +28,10 @@ export class ListComponent implements OnInit {
         const videogamesArray: VideogamesInterface[] = [];
         videogames.forEach((videogame) => {
           videogamesArray.push({
-            id: videogame.appId,
             title: videogame.title,
             cover: videogame.imgUrl,
             year: videogame.released,
+            appId: videogame.appId,
           });
         });
         this.videogames = videogamesArray;
@@ -37,14 +41,25 @@ export class ListComponent implements OnInit {
   }
 
   public filterVideogames = (filter: string) => {
-    if (filter === ''){
+    console.log(filter);
+    if (filter === '') {
       this.getVideogamesByName('COUNTER');
-    }  else {
+    } else {
       this.getVideogamesByName(filter);
     }
   };
 
-  goToDetails(id: string){
-    this.router.navigate(['details', id]);
-  }
+  goToDetails = (game: VideogamesInterface) => {
+    console.log(game);
+    this.router.navigate(['details', game.id]);
+  };
+
+  addToCollection = (game: VideogamesInterface) => {
+    this.videogamesService.postSteamGameToCollection(game).subscribe({
+      next: (videogame) => {
+        this.router.navigate(['creations']);
+      },
+      error: (error) => console.error('Error en get routes: ', error),
+    });
+  };
 }

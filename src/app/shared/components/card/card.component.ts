@@ -5,14 +5,20 @@ import { VideogamesInterface } from '../../interface/videogames.interface';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
   @Input() videogame!: VideogamesInterface;
+  @Input() steamGame: boolean = false;
 
-  constructor() { }
+  @Input()
+  callbackFunctionFirst!: (args: any) => void;
+  @Input()
+  callbackFunctionSecond!: (args: any) => void;
+  @Input() labelFirst: string = '';
+  @Input() labelSecond: string = '';
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

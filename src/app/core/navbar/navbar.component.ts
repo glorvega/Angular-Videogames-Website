@@ -126,6 +126,7 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateTo(path: string) {
+    console.log(path);
     this.router.navigate([path]);
   }
 }

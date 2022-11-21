@@ -3,9 +3,11 @@ se haga click en él -->
 <div class="videogames-container">
     <h2 class="videogames-container__title">¡Aquí aparecerán todos los videojuegos que puedes añadir a tu lista!</h2>
     <input type="text" placeholder="Busca tu videojuego favorito" class="videogames-container__input"
-        [(ngModel)]="inputSearch" (ngModelChange)="filterVideogames(inputSearch)">
+        [(ngModel)]="inputSearch" (keydown.enter)="filterVideogames(inputSearch)">
     <div class="videogames-container__list">
-        <app-card *ngFor="let videogame of videogames" (click)="goToDetails(videogame.id)" [videogame]="videogame">
+        <app-card *ngFor="let videogame of videogames" [videogame]="videogame" [steamGame]="true"
+            [callbackFunctionFirst]="addToCollection" [callbackFunctionSecond]="goToDetails" labelFirst="Añadir"
+            labelSecond="Detalles">
         </app-card>
     </div>
 </div>

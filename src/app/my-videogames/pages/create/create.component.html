@@ -1,35 +1,28 @@
 <!-- Aquí crearé un formulario para crear nuestro propio videojuego -->
 <div class="create-container">
-    <form [formGroup]="videogamesForm">
-        <h2>Introduce los datos de tu videojuego:</h2>
-        <div class="titleForm">
-            <label for="title">Title:</label>
-            <input
-            class="form-control"
-            type="text"
-            id="title"
-            formControlName="title"
-            minlength="4" />
-        </div>
+  <h2>Introduce los datos de tu videojuego:</h2>
+  <form [formGroup]="videogamesForm">
+    <div class="create-container__titleForm">
+      <label for="title">Title:</label>
+      <input class="form-control" type="text" id="title" formControlName="title" minlength="4"
+        placeholder="Nombre del videojuego" />
+      <p class="text-error" *ngIf="isInputValid('title')">Debe ser de 4 letras como mínimo</p>
+    </div>
 
-        <div class="coverForm">
-            <label for="cover">Cover:</label>
-            <input class="form-control"
-            type="text"
-            id="cover"
-            #myCover (focus)="myCover.select()"
-            formControlName="cover" />
-        </div>
+    <div class="create-container__coverForm">
+      <label for="cover">Cover:</label>
+      <input class="form-control" type="file" id="cover" formControlName="cover"
+        accept="image/gif, image/jpeg, image/png" />
+      <p class="text-error" *ngIf="isInputValid('cover')">Debes añadir una imagen</p>
+    </div>
 
-        <div class="yearForm">
-            <label for="year">Year:</label>
-            <input class="form-control" 
-            type="text"
-            id="year"
-            formControlName="year" />
-        </div>
-        <!--         
-        <div class="genreForm">
+    <div class="create-container__yearForm">
+      <label for="year">Year:</label>
+      <input class="form-control" type="text" min="1990" max="2025" value="2016" formControlName="year" />
+      <p class="text-error" *ngIf="isInputValid('year')"></p>
+    </div>
+
+    <!--  <div class="genreForm">
           <label for="genre"></label>
           <select id="genre" formControlName="genre">
             <option value="" disabled>Choose a genre</option>
@@ -49,14 +42,8 @@
             <input class="checkbox" type="checkbox" [formControlName]="i" />
             {{ plataformsList[i].value }}
           </label>
-        </div>
-      
-        <button type="submit" class="add-btn"  [disabled]="!videogamesForm.valid ">{{btnText}}</button>
-      </form>
-      
-      <div class="container-btn-delete">
-        <button class="start-btn" *ngIf="idVideogame !== ''" (click)="deleteSelected()">Delete</button>
-      </div>
-    
+        </div> -->
+
+    <button type="submit" class="add-btn" [disabled]="videogamesForm.invalid">Guardar</button>
+  </form>
 </div>
- -->

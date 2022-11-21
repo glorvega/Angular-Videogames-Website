@@ -1,7 +1,12 @@
 <div class="card-container">
     <h4 class="card-container__videogame--title">{{ videogame.title }}</h4>
-    <img class="card-container__videogame--cover" src="{{ videogame.cover }}" alt="{{ videogame.title }}" />
+    <img [ngClass]="'card-container__videogame--cover' + (steamGame ? '--steam' : '')" src="{{ videogame.cover }}"
+        alt="{{ videogame.title }}" />
     <p>{{ videogame.company }} - {{ videogame.year }}</p>
     <p>{{ videogame.genre }}</p>
     <p class="card-container__videogame--platform">{{ videogame.platform }}</p>
+    <div class="card-container__videogame--buttons">
+        <button (click)="callbackFunctionFirst(videogame)">{{labelFirst}}</button>
+        <button (click)="callbackFunctionSecond(videogame)">{{labelSecond}}</button>
+    </div>
 </div>

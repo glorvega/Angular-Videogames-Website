@@ -6,8 +6,15 @@ import { CreationsComponent } from './pages/creations/creations.component';
 // Aqui definimos las rutas de nuestra SPA
 const routes: Routes = [
   { path: '', redirectTo: 'creations', pathMatch: 'full' },
-  { path: 'creations', component: CreationsComponent},
-  { path: 'create', component: CreateComponent }
+  { path: 'creations', component: CreationsComponent },
+  {
+    path: 'create',
+    component: CreateComponent,
+  },
+  {
+    path: 'create/:id',
+    component: CreateComponent,
+  },
 ];
 
 @NgModule({
