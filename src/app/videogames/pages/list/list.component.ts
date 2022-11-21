@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VideogamesInterface } from 'src/app/shared/interface/videogames.interface';
-import { VideogamesService } from '../services/videogames.service';
+import { VideogamesService } from '../../services/videogames.service';
 
 @Component({
   selector: 'app-list',
@@ -36,6 +36,6 @@ export class ListComponent implements OnInit {
   }
 
   goToDetails(id: string){
-    //this.router.navigate(['details',  id])
+    this.router.navigate(['details', id]);
   }
 }

@@ -7,8 +7,3 @@ export interface CreationsInterface {
     year: number;
     genre: string;
 }
-
-export interface PlatformInterface{
-    id: number;
-    value: string;
-}

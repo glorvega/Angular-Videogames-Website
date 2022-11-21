@@ -9,8 +9,9 @@ import { CreationsService } from './services/creations.service';
 })
 export class CreationsComponent implements OnInit {
 
-  creations: CreationsInterface[] = [];
-
+  public creations: CreationsInterface[] = [];
+  public inputSearch: string = '';
+  
   constructor( private creationsService: CreationsService ) { }
 
   ngOnInit(): void {
@@ -18,7 +19,12 @@ export class CreationsComponent implements OnInit {
     .subscribe( creations=> {
       this.creations = creations;
     })
-    
   }
+
+  public filterCreations = (filter: string) => {
+      this.creations = this.creations.filter((creation) =>
+        creation.title.toLowerCase().includes(filter.toLowerCase())
+      );
+  };
 
 }

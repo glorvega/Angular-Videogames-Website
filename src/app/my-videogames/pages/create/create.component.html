@@ -1,0 +1,62 @@
+<!-- Aquí crearé un formulario para crear nuestro propio videojuego -->
+<div class="create-container">
+    <form [formGroup]="videogamesForm">
+        <h2>Introduce los datos de tu videojuego:</h2>
+        <div class="titleForm">
+            <label for="title">Title:</label>
+            <input []
+            class="form-control"
+            type="text"
+            id="title"
+            formControlName="title"
+            minlength="4" />
+        </div>
+
+        <div class="coverForm">
+            <label for="cover">Cover:</label>
+            <input class="form-control"
+            type="text"
+            id="cover"
+            #myCover (focus)="myCover.select()"
+            formControlName="cover" />
+        </div>
+
+        <div class="yearForm">
+            <label for="year">Year:</label>
+            <input class="form-control" 
+            type="text"
+            id="year"
+            formControlName="year" />
+        </div>
+        <!--         
+        <div class="genreForm">
+          <label for="genre"></label>
+          <select id="genre" formControlName="genre">
+            <option value="" disabled>Choose a genre</option>
+            <option *ngFor="let genre of genreList" value="{{ genre }}">
+              {{ genre }}
+            </option>
+          </select>
+        </div>
+      
+        
+      
+        <div class="platformForm">
+          <label
+            formArrayName="platform"
+            *ngFor="let platform of ordersFormArray.controls; let i = index">
+            
+            <input class="checkbox" type="checkbox" [formControlName]="i" />
+            {{ plataformsList[i].value }}
+          </label>
+        </div>
+      
+        <button type="submit" class="add-btn"  [disabled]="!videogamesForm.valid ">{{btnText}}</button>
+      </form>
+      
+      <div class="container-btn-delete">
+        <button class="start-btn" *ngIf="idVideogame !== ''" (click)="deleteSelected()">Delete</button>
+      </div>
+    
+</div>
+ -->
