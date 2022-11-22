@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+In order to deploy the private server, you need to open the powershell console and run the command "npm run start:server".
+
+This will load the database and it will let you navigate through the navbar and the specific routes within the application.
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding

@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getVideogamesByName('COUNTER');
+    this.getVideogamesByName('HALF-LIFE');
   }
 
   getVideogamesByName(name: string) {
@@ -43,7 +43,7 @@ export class ListComponent implements OnInit {
   public filterVideogames = (filter: string) => {
     console.log(filter);
     if (filter === '') {
-      this.getVideogamesByName('COUNTER');
+      this.getVideogamesByName('HALF-LIFE');
     } else {
       this.getVideogamesByName(filter);
     }

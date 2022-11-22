@@ -1,0 +1,23 @@
+.detail-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+    margin-top: 50px;
+    text-align: justify;
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    padding: 20px;
+
+    button {
+        width: 70px;
+        height: 30px;
+        background-color: #77C3B1;
+        box-shadow: #141515;
+        border-radius: 20px;
+        border: 0px;
+        cursor: pointer;
+    }
+}

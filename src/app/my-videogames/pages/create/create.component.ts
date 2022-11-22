@@ -8,6 +8,7 @@ import {
 import { ActivatedRoute, Router } from '@angular/router';
 import { VideogamesInterface } from 'src/app/shared/interface/videogames.interface';
 import { CreationsService } from '../../services/creations.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create',
@@ -17,19 +18,13 @@ import { CreationsService } from '../../services/creations.service';
 export class CreateComponent implements OnInit {
   private id!: string | null;
   isEdit: boolean = false;
-  /*   videogamesForm: FormGroup = new FormGroup({
-    title: new FormControl('', Validators.minLength(4)),
-    cover: new FormControl('', Validators.required),
-    year: new FormControl('', Validators.required),
-
-  }) */
 
   videogamesForm: FormGroup = this.fb.group({
     title: ['', [Validators.required, Validators.minLength(4)]],
     cover: ['', [Validators.required]],
-    year: [''],
-    genre: [''],
-    platform: [''],
+    year: ['', [Validators.required, Validators.minLength(4)]],
+    genre: ['', [Validators.required, Validators.minLength(3)]],
+    platform: ['', [Validators.required, Validators.minLength(3)]],
     id: [''],
     appId: [''],
   });
@@ -70,6 +65,12 @@ export class CreateComponent implements OnInit {
   addToCollection = (game: VideogamesInterface) => {
     this.creationsService.postVideogame(game).subscribe({
       next: (videogame) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Videojuego añadido correctamente',
+          showConfirmButton: false,
+          timer: 1500,
+        });
         this.router.navigate(['creations']);
       },
       error: (error) => console.error('Error en get routes: ', error),
@@ -79,6 +80,12 @@ export class CreateComponent implements OnInit {
   editGame = (game: VideogamesInterface) => {
     this.creationsService.putVideogame(game).subscribe({
       next: (videogame) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Videojuego editado correctamente',
+          showConfirmButton: false,
+          timer: 1500,
+        });
         this.router.navigate(['creations']);
       },
       error: (error) => console.error('Error en get routes: ', error),

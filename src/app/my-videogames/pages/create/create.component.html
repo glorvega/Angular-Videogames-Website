@@ -3,45 +3,38 @@
   <h2>Introduce los datos de tu videojuego:</h2>
   <form [formGroup]="videogamesForm" (ngSubmit)="sendInfo()">
     <div class="create-container__titleForm">
-      <label for="title">Title:</label>
+      <label for="title">Título:</label>
       <input class="form-control" type="text" id="title" formControlName="title" minlength="4"
         placeholder="Nombre del videojuego" />
       <p class="text-error" *ngIf="isInputValid('title')">Debe ser de 4 letras como mínimo</p>
     </div>
 
     <div class="create-container__coverForm">
-      <label for="cover">Cover:</label>
-      <input class="form-control" type="text" id="cover" formControlName="cover" />
+      <label for="cover">Portada:</label>
+      <input class="form-control" type="text" id="cover" formControlName="cover"
+        placeholder="Introduce la URL de la portada" />
       <p class="text-error" *ngIf="isInputValid('cover')">Debes añadir una imagen</p>
     </div>
 
     <div class="create-container__yearForm">
-      <label for="year">Year:</label>
-      <input class="form-control" type="text" min="1990" max="2025" value="2016" formControlName="year" />
-      <p class="text-error" *ngIf="isInputValid('year')"></p>
+      <label for="year">Año:</label>
+      <input class="form-control" type="text" formControlName="year" placeholder="Año de lanzamiento" />
+      <p class="text-error" *ngIf="isInputValid('year')">Debes introducir el año de lanzamiento</p>
     </div>
 
-    <!--  <div class="genreForm">
-          <label for="genre"></label>
-          <select id="genre" formControlName="genre">
-            <option value="" disabled>Choose a genre</option>
-            <option *ngFor="let genre of genreList" value="{{ genre }}">
-              {{ genre }}
-            </option>
-          </select>
-        </div>
-      
-        
-      
-        <div class="platformForm">
-          <label
-            formArrayName="platform"
-            *ngFor="let platform of ordersFormArray.controls; let i = index">
-            
-            <input class="checkbox" type="checkbox" [formControlName]="i" />
-            {{ plataformsList[i].value }}
-          </label>
-        </div> -->
+    <div class="create-container__genreForm">
+      <label for="genre">Género:</label>
+      <input class="form-control" type="text" id="genre" formControlName="genre"
+        placeholder="Acción, Multijugador, Shooter..." />
+      <p class="text-error" *ngIf="isInputValid('genre')">El juego tendrá como mínimo un género</p>
+    </div>
+
+    <div class="create-container__platformForm">
+      <label for="platform">Plataforma:</label>
+      <input class="form-control" type="text" formControlName="platform"
+        placeholder="Nintendo Switch, Play Station, Xbox..." />
+      <p class="text-error" *ngIf="isInputValid('platform')">Introduce al menos una plataforma</p>
+    </div>
 
     <button type="submit" class="add-btn" [disabled]="videogamesForm.invalid">Guardar</button>
   </form>
