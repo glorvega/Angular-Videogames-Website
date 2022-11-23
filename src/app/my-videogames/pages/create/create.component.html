@@ -16,6 +16,12 @@
       <p class="text-error" *ngIf="isInputValid('cover')">Debes añadir una imagen</p>
     </div>
 
+    <div class="create-container__companyForm">
+      <label for="company">Desarrollador:</label>
+      <input class="form-control" type="text" id="company" formControlName="company"
+        placeholder="EA, Nintendo, Ubisoft..." />
+    </div>
+
     <div class="create-container__yearForm">
       <label for="year">Año:</label>
       <input class="form-control" type="text" formControlName="year" placeholder="Año de lanzamiento" />

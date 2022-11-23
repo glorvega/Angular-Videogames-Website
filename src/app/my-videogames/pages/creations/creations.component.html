@@ -1,9 +1,9 @@
 <div class="creations-container">
     <h2 class="creations-container__title">¡Aquí aparecerán todos los videojuegos que has añadido!</h2>
     <input type="text" placeholder="Busca tu videojuego favorito" class="creations-container__input"
-        [(ngModel)]="inputSearch" (ngModelChange)="filterCreations(inputSearch)">
+        [(ngModel)]="inputSearch">
     <div class="creations-container__list">
-        <app-card *ngFor="let videogame of creations" [videogame]="videogame"
+        <app-card *ngFor="let videogame of creations | filterGames:inputSearch" [videogame]="videogame"
             [steamGame]="videogame.appId ? true : false" [callbackFunctionFirst]="editCreation"
             [callbackFunctionSecond]="deleteCreation" labelFirst="Editar" labelSecond="Borrar"></app-card>
 

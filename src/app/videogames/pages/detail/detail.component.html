@@ -3,8 +3,8 @@
         <img src="{{videogameDetails.imgUrl}}" alt="{{videogameDetails.title}}">
     </div>
     <h1 class="detail-component__title">{{videogameDetails.title}}</h1>
-    <p class="detail-component__year">Año de lanzamiento: {{videogameDetails.released}}</p>
+    <p class="detail-component__year">Año de lanzamiento: {{videogameDetails.released}} -
+        {{videogameDetails.developer.name}}</p>
     <p class="detail-component__description">{{ videogameDetails.description }}</p>
-    <p class="detail-component__price">{{ videogameDetails.price }}</p>
-    <button>Añadir</button>
+    <p class="detail-component__price">{{ videogameDetails.allReviews.ratingValue }}</p>
 </div>

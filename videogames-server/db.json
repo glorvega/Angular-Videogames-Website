@@ -51,15 +51,14 @@
       "id": 6
     },
     {
-      "title": "Luigi's Mansion",
+      "title": "Super Mario Odyssey",
+      "cover": "https://i.3djuegos.com/juegos/14037/mario_switch/fotos/ficha/mario_switch-3759134.jpg",
+      "year": "2017",
+      "genre": "Plataformas",
+      "platform": "Nintendo Switch",
       "company": "Nintendo",
-      "cover": "https://m.media-amazon.com/images/I/81cHm50auZL._AC_SY879_.jpg",
-      "genre": "Action",
-      "year": "2019",
-      "platform": [
-        "Nintendo Switch"
-      ],
-      "id": 7
+      "id": 7,
+      "appId": ""
     },
     {
       "title": "Call of Duty",
@@ -116,17 +115,18 @@
       "id": 24
     },
     {
-      "title": "Resident Evil 2",
-      "company": "Capcom",
-      "cover": "https://bloody-disgusting.com/wp-content/uploads/2018/07/re-2.png",
-      "genre": "Survival Horror",
-      "year": "2019",
+      "title": "Horizon Forbidden West",
+      "cover": "https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/JVp9FMrLurQYEcC78T7FDw51.jpg",
+      "year": "2022",
+      "genre": "Aventuras",
       "platform": [
         "PlayStation",
         "Xbox",
         "PC"
       ],
-      "id": 25
+      "company": "Guerrilla Games",
+      "id": 25,
+      "appId": ""
     },
     {
       "title": "Spyro el dragón",
@@ -139,6 +139,33 @@
         "PlayStation"
       ],
       "id": 26
+    },
+    {
+      "title": "God of War: Ragnarök",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg",
+      "year": "2022",
+      "genre": "Acción",
+      "platform": "PlayStation 5",
+      "company": "SIE Santa Monica Studio",
+      "id": 31,
+      "appId": ""
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/capsule_sm_120.jpg?t=1656615305",
+      "year": "5 Dec, 2019",
+      "genre": "Shooter",
+      "platform": "Play Station 4",
+      "company": "Rockstar Games",
+      "id": 32,
+      "appId": "1174180"
+    },
+    {
+      "title": "Half-Life: Alyx",
+      "cover": "https://cdn.akamai.steamstatic.com/steam/apps/546560/capsule_sm_120.jpg?t=1666823432",
+      "year": "23 Mar, 2020",
+      "appId": "546560",
+      "id": 33
     }
   ],
   "routes": [
@@ -155,7 +182,7 @@
       "img": null
     },
     {
-      "label": "Mis Creaciones",
+      "label": "Mi Colección",
       "route": "/creations",
       "alt": "Creaciones",
       "img": null

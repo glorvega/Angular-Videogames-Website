@@ -29,16 +29,6 @@ export class CreationsComponent implements OnInit {
       });
   };
 
-  public filterCreations = (filter: string) => {
-    if (filter === '') {
-      this.getVideogames();
-    } else {
-      this.creations = this.creations.filter((creation) =>
-        creation.title.toLowerCase().includes(filter.toLowerCase())
-      );
-    }
-  };
-
   public editCreation = (game: VideogamesInterface) => {
     this.router.navigate(['create', game.id]);
   };

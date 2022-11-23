@@ -7,19 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    DetailComponent,
-    ListComponent
-  ],
-  exports: [
-    DetailComponent,
-    ListComponent
-  ],
-  imports: [
-    CommonModule,
-    VideogamesRoutingModule,
-    SharedModule,
-    FormsModule
-  ]
+  declarations: [DetailComponent, ListComponent],
+  exports: [DetailComponent, ListComponent],
+  imports: [CommonModule, VideogamesRoutingModule, SharedModule, FormsModule],
 })
-export class VideogamesModule { }
+export class VideogamesModule {}

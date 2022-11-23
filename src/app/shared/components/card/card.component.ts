@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SteamVideogames } from 'src/app/videogames/interfaces/steamVideogames.interface';
 import { VideogamesInterface } from '../../interface/videogames.interface';
 
 @Component({

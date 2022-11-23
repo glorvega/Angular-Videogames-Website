@@ -1,0 +1,6 @@
+@import url('../assets/styles/_scrollbar.scss');
+
+body {
+    overflow: hidden scroll;
+    scroll-behavior: smooth;
+}

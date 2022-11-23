@@ -7,19 +7,14 @@ import { AboutComponent } from './about/about.component';
 import { VideogamesModule } from './videogames/videogames.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { AppService } from './services/app.service';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { MyVideogamesModule } from './my-videogames/my-videogames.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    
-  ],
+  declarations: [AppComponent, HomeComponent, AboutComponent],
   imports: [
     VideogamesModule,
     MyVideogamesModule,
@@ -30,10 +25,9 @@ import { MyVideogamesModule } from './my-videogames/my-videogames.module';
     FooterComponent,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
   ],
   providers: [AppService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

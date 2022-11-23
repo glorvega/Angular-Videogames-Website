@@ -23,8 +23,9 @@ export class CreateComponent implements OnInit {
     title: ['', [Validators.required, Validators.minLength(4)]],
     cover: ['', [Validators.required]],
     year: ['', [Validators.required, Validators.minLength(4)]],
-    genre: ['', [Validators.required, Validators.minLength(3)]],
+    genre: [''],
     platform: ['', [Validators.required, Validators.minLength(3)]],
+    company: [''],
     id: [''],
     appId: [''],
   });
